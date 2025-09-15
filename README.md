@@ -49,9 +49,9 @@
     <label for="actor">Choose Your Favourite Actor:</label><br>
     <select id="actor" name="actor" required>
       <option value="">--Select Actor--</option>
-      <option value="Shah Rukh Khan">Shah Rukh Khan</option>
+      <option value="sampurnesh Babu">Shah Rukh Khan</option>
       <option value="Salman Khan">Salman Khan</option>
-      <option value="Aamir Khan">Aamir Khan</option>
+      <option value="vd">Aamir Khan</option>
       <option value="Prabhas">Prabhas</option>
       <option value="Allu Arjun">Allu Arjun</option>
       <option value="Ram Charan">Ram Charan</option>
@@ -64,6 +64,9 @@
       <option value="Mohanlal">Mohanlal</option>
       <option value="Ranbir Kapoor">Ranbir Kapoor</option>
       <option value="Ranveer Singh">Ranveer Singh</option>
+      <option value="Hrithik Roshan">Hrithik Roshan</option>
+      <option value="Tiger Shroff">Tiger Shroff</option>
+      <option value="none of the above">Varun Dhawan</option>
     </select><br><br>
 
     <button type="submit">Submit</button>
@@ -72,8 +75,8 @@
   <p id="result"></p>
 
   <!-- Background Music -->
-  <audio autoplay loop>
-    <source src="download1.mp3.mp3" type="audio/mpeg">
+  <audio id="bgm" loop>
+    <source src="download10.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
 
@@ -85,6 +88,11 @@
       document.getElementById("result").innerHTML = 
         "🎉 Thank you <b>" + name + "</b>! Your favourite actor is <b>" + actor + "</b>.";
     });
+
+    // Play music after first click anywhere
+    document.body.addEventListener("click", function () {
+      document.getElementById("bgm").play();
+    }, { once: true });
   </script>
 
 </body>
